@@ -3,9 +3,16 @@ import Home from "../Pages/Home";
 import User from "../Pages/User";
 import React from "react";
 import Layout from "../Components/Layout/Layout";
+import Login from "../Pages/Login/Login";
 
 export const ROUTER_ITEM: Array<Object> = [
-    // { path: "/", key:"/",label: "首页", element: <Navigate to="/layout/home" /> },
+   // {path: "/", key: "/", label: "首页", element: <Navigate to="/login"/>},
+    {
+        path: "/login",
+        key: "login",
+        label: "登录",
+        element: <Login/>
+    },
     {
         path: "/layout",
         key: "layout",
