@@ -1,17 +1,19 @@
-import { Navigate, useRoutes } from "react-router-dom";
+import { useRoutes } from "react-router-dom";
 import Home from "../Pages/Home";
 import User from "../Pages/User";
 import React from "react";
 import Layout from "../Components/Layout/Layout";
 
 export const ROUTER_ITEM: Array<Object> = [
-  { path: "/", label: "首页", element: <Navigate to="/layout/home" /> },
+ // { path: "/", key:"/",label: "首页", element: <Navigate to="/layout/home" /> },
   {
     path: "/layout",
+    key:"layout",
+    label:"控制台",
     element: <Layout />,
     children: [
-      { path: "home", element: <Home />, index: true },
-      { path: "user", element: <User /> },
+      { path: "home",key:"home", label:"首页", element: <Home />, index: true },
+      { path: "user",key:"user", label:"用户",element: <User /> },
     ],
   },
 ];
