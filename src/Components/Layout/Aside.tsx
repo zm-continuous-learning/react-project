@@ -5,10 +5,13 @@ import {useNavigate} from "react-router-dom";
 
 const Aside = () => {
     const [router] = useState(ROUTER_ITEM);
-    const storageSelectKeys = sessionStorage.getItem('setSelectKeys');
-    const [selectKey, setSelectKeys] = useState(storageSelectKeys);
-    const defaultOpenKey = JSON.parse(sessionStorage.getItem('setOpenKey'));
-    const [openKey, setOpenKey] = useState(defaultOpenKey);
+    //选择的菜单
+    const storageSelectKeys = sessionStorage.getItem('setSelectKeys') || '';
+    const [selectKey, setSelectKeys] = useState<string>(storageSelectKeys);
+    //展开的菜单
+    const defaultOpenKey = JSON.parse(sessionStorage.getItem('setOpenKey')|| '[]') ;
+    const [openKey, setOpenKey] = useState<[]>(defaultOpenKey);
+    //路由导航
     const navigate = useNavigate()
     const handlerMenu: MenuProps['onClick'] = (e) => {
         const keyPth = e.keyPath;
