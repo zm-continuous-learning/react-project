@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.scss'
 import {BrowserRouter} from "react-router-dom";
 import {GetRouters} from "./Router/Router";
 import "antd/dist/reset.css";

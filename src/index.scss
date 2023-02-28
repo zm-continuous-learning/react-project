@@ -1,3 +1,272 @@
-body {
+/* reset css */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+button,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "PingFang SC", serif;
+}
+
+#root {
+  height: 100%;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 全局修改antd的样式 */
+$gray1: #18191b;
+$gray2: #909296;
+$primary-pink: #ffa39e;
+$gray-bg: #f5f6f8;
+$gray-line: #eaeaec;
+
+.ant-btn {
+  padding: 4px 8px;
+}
+
+.ant-btn-primary:hover,
+.ant-btn-primary:focus {
+  background: #ffa39e;
+}
+
+.ant-btn-primary[disabled],
+.ant-btn-primary[disabled]:hover,
+.ant-btn-primary[disabled]:focus,
+.ant-btn-primary[disabled]:active {
+  background: $gray2;
+  color: #fff;
+}
+
+.ant-btn-link:hover,
+.ant-btn-link:focus,
+.ant-btn-link:active {
+  color: #ffa39e;
+}
+
+.ant-btn-link[disabled],
+.ant-btn-link[disabled]:hover,
+.ant-btn-link[disabled]:focus,
+.ant-btn-link[disabled]:active {
+  color: $gray2;
+}
+
+.ant-btn-dangerous.ant-btn-primary {
+  background: #f57e06;
+  border-color: #f57e06;
+}
+
+.ant-btn-dangerous.ant-btn-primary:hover,
+.ant-btn-dangerous.ant-btn-primary:focus,
+.ant-btn-dangerous.ant-btn-primary:active {
+  background: #f57e06;
+  border-color: #f57e06;
+}
+
+.ant-btn-text[disabled],
+.ant-btn-text[disabled]:hover,
+.ant-btn-text[disabled]:focus,
+.ant-btn-text[disabled]:active {
+  color: $gray2;
+}
+
+.ant-input {
+  border-radius: 4px;
+  border: 1px solid $gray-line;
+  padding: 6px 8px;
+}
+
+.ant-input:hover {
+  border-color: #cacaca;
+}
+
+.ant-input:focus {
+  border-color: $primary-pink;
+  box-shadow: none;
+}
+
+.ant-input[disabled] {
+  background-color: $gray-bg;
+  border-color: $gray-line;
+  color: $gray2;
+}
+
+.ant-input[disabled]:hover {
+  border-color: $gray-line;
+}
+
+.ant-input-status-error:not(.ant-input-disabled, .ant-input-borderless).ant-input,
+.ant-input-status-error:not(.ant-input-disabled, .ant-input-borderless).ant-input:hover {
+  border-color: #f57e06;
+  box-shadow: none;
+}
+
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  border-radius: 4px;
+}
+
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #cacaca;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  box-shadow: none;
+}
+
+.ant-select-arrow {
+  color: $gray1;
+}
+
+.ant-select-dropdown {
+  border-radius: 4px;
+  border: 1px solid #eaeaec;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 12%);
+}
+
+.ant-modal-header {
+  border: none;
+}
+
+.ant-modal-title {
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.ant-modal-footer {
+  border: none;
+}
+
+.ant-modal-body {
+  padding: 10px 24px 16px;
+  line-height: 20px;
+}
+
+.ant-message-notice-content {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
+  padding: 14px 16px;
+}
+
+.ant-list-empty-text {
+  padding: 0;
 }
