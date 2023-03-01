@@ -22,11 +22,41 @@
     "react-router-dom": "^6.8.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.35.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-config-standard-with-typescript": "^34.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-unicorn": "^45.0.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.2",
     "sass": "^1.58.3",
-    "typescript": "^4.9.3",
+    "typescript": "^4.9.5",
     "vite": "^4.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js}": [
+      "eslint -c .eslintrc.js"
+    ],
+    "*.{css,less,scss}": [
+      "stylelint --config .stylelintrc.json"
+    ],
+    "*.{ts,tsx,js,json,html,yml,css,less,scss,md}": [
+      "prettier --write"
+    ]
   }
 }
