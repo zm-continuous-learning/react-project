@@ -1,4 +1,4 @@
-import {useRoutes} from "react-router-dom";
+import {Navigate, useRoutes} from "react-router-dom";
 import Home from "../Pages/Home";
 import User from "../Pages/User";
 import React from "react";
@@ -6,7 +6,7 @@ import Layout from "../Components/Layout/Layout";
 import Login from "../Pages/Login/Login";
 
 export const ROUTER_ITEM: Array<Object> = [
-   // {path: "/", key: "/", label: "首页", element: <Navigate to="/login"/>},
+    {path: "/", key: "/", label: "首页", element: <Navigate to="/login"/>},
     {
         path: "/login",
         key: "login",
